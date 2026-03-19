@@ -1,4 +1,5 @@
 📘 Python 30-Day Syllabus
+
 ✅ DAY 01: Introduction & Setup
 
 Course Overview:
