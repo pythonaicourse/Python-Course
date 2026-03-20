@@ -1,329 +1,202 @@
-📘 Python 30-Day Syllabus
+# 🐍 Python Fundamentals – Day 02
 
-✅ DAY 01: Introduction & Setup
+## Introduction
 
-Course Overview:
+* Python is a general-purpose high-level programming language.
 
-What is Programming?
+* Python was developed by Guido Van Rossum in 1989 while working at the National Research Institute in the Netherlands.
 
-Introduction to Python
+* Python was officially made available to the public in 1991.
+  The official date of birth for Python is: **February 20th, 1991**.
 
-History of Python
+* Python is recommended as the first programming language for beginners.
 
-Features of Python
+---
 
-Python vs C / Java
+## Example 1: To Print Hello World
 
-Python Installation (Windows)
+### Java:
 
-VS Code Setup
+```java
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello World");
+    }
+}
+```
 
-First Python Program
+### C:
 
-print() Function Basics
+```c
+#include<stdio.h>
+int main() {
+    printf("Hello World");
+}
+```
 
-Understanding Output
+### Python:
 
-Creating & Saving .py Files
+```python
+print("Hello World")
+```
 
-Terminal / Command Line Basics
+---
 
-Common Beginner Mistakes
+## Modular Programming Features from Modula-3
 
-Practice Guidelines
+Most of the syntax in Python is derived from C and ABC languages.
 
-GitHub Repository Introduction
+---
 
-How to Use Course Materials
+## Where We Can Use Python
 
-Daily Study Plan
+We can use Python everywhere. The most common and important application areas are:
 
-Assignment
+1. For developing Desktop Applications
+2. For developing Web Applications
+3. For developing Database Applications
+4. For Network Programming
+5. For developing Games
+6. For Data Analysis Applications
+7. For Machine Learning
+8. For developing Artificial Intelligence Applications
+9. For IoT
 
-Q&A + Next Day Preview
+---
 
-✅ DAY 02: Variables & Data Types
+## Note
 
-Revision
+* Internally, Google and YouTube use Python coding.
+* NASA and the New York Stock Exchange applications are developed using Python.
+* Top software companies like Google, Microsoft, IBM, and Yahoo use Python.
 
-What is a Variable?
+---
 
-Naming Rules
+## Features of Python
 
-Assigning Values
+### 1. Simple and Easy to Learn
 
-Multiple Assignment
+Python is a simple programming language. When we read Python programs, we feel like reading English statements.
+The syntax is very simple, and only 30+ keywords are available.
+Compared with other languages, we can write programs with fewer lines.
+Hence, more readability and simplicity.
+This reduces development time and cost.
 
-Memory Basics
+---
 
-Data Types Overview
+### 2. Freeware and Open Source
 
-int, float, str, bool
+We can use Python software without any license, and it is freeware.
+Its source code is open, so we can customize it based on our requirements.
 
-type() Function
+Example: Jython is a customized version of Python to work with Java applications.
 
-Type Casting
+Advantages:
 
-Dynamic Typing
+1. We can use already existing legacy non-Python code
+2. We can improve the performance of the application
 
-Static vs Dynamic Typing
+---
 
-Reassigning Variables
+### 3. Embedded
 
-Common Mistakes
+We can use Python programs in other language programs.
+i.e., we can embed Python programs anywhere.
 
-Practice Programs
+---
 
-Assignment
+### 4. Extensive Library
 
-✅ DAY 03: Input & Output
+Python has a rich inbuilt library.
+As programmers, we can use this library directly and are not responsible for implementing functionality.
 
-Revision
+---
 
-Input vs Output
+### 5. High-Level Programming Language
 
-input() Function
+Python is a high-level programming language and hence programmer-friendly.
+We are not required to handle low-level activities like memory management and security.
 
-String Input
+---
 
-Numeric Input (Casting)
+### 6. Platform Independent
 
-print() Advanced Usage
+Once we write a Python program, it can run on any platform without rewriting.
+Internally, PVM is responsible for converting it into machine-understandable form.
 
-sep and end
+---
 
-String Formatting
+### 7. Portability
 
-+, ,, format()
+Python programs are portable.
+We can migrate from one platform to another very easily.
+Python programs provide the same results on any platform.
 
-f-Strings
+---
 
-Multiple Inputs
+### 8. Dynamically Typed
 
-Real-Life Examples
+In Python, we are not required to declare types for variables.
+Based on the assigned value, the type is automatically allocated.
 
-Common Errors
+But in Java, C, etc., we must declare types at the beginning (statically typed).
 
-Practice
+This provides more flexibility to the programmer.
 
-Assignment
+---
 
-✅ DAY 04: Operators & Expressions
+### 9. Both Procedure-Oriented and Object-Oriented
 
-Revision
+Python supports both:
 
-Arithmetic Operators
+* Procedure-oriented programming (like C, Pascal)
+* Object-oriented programming (like C++, Java)
 
-Floor Division vs Division
+Hence, we get benefits like security and reusability.
 
-Power Operator
+---
 
-Comparison Operators
+### 10. Interpreted
 
-Logical Operators
+We are not required to compile Python programs explicitly.
+The Python interpreter handles compilation.
 
-Assignment Operators
+If compilation fails → syntax errors
+If successful → PVM executes the program
 
-Identity Operators
+---
 
-Membership Operators
+### 11. Extensible
 
-Operator Precedence
+We can use other language programs in Python.
 
-Expressions
+---
 
-Boolean Logic
+## Limitations of Python
 
-Calculator Program
+1. Performance is not as fast as compiled languages because it is interpreted
+2. Not commonly used for mobile application development
 
-Common Mistakes
+---
 
-Practice
+## Flavors of Python
 
-Assignment
+1. **CPython**
+   Standard version of Python. Used with C language applications
 
-✅ DAY 05: Conditional Statements
+2. **Jython (JPython)**
+   Used for Java applications. Runs on JVM
 
-Revision
+3. **IronPython**
+   Used for .NET platform
 
-Decision Making
+4. **PyPy**
+   Provides better performance using JIT compiler
 
-if Statement
+5. **RubyPython**
+   Used for Ruby platforms
 
-if-else
+6. **Anaconda Python**
+   Designed for large-scale data processing
 
-elif Ladder
-
-Nested Conditions
-
-Flow of Execution
-
-Real-Life Examples
-
-Even/Odd Program
-
-Grade System
-
-Max of Three Numbers
-
-Common Errors
-
-Practice
-
-Assignment
-
-✅ DAY 06: Loops
-
-Revision
-
-while Loop
-
-Infinite Loops
-
-break, continue, pass
-
-for Loop
-
-range()
-
-Step Values
-
-Nested Loops
-
-Loop with else
-
-Pattern Programs
-
-Sum & Factorial
-
-Common Mistakes
-
-Practice
-
-Assignment
-
-✅ DAY 07: Strings
-
-Revision
-
-String Basics
-
-Indexing & Slicing
-
-Negative Indexing
-
-String Immutability
-
-Operators (+, *)
-
-len()
-
-Membership Operators
-
-String Methods
-
-strip, find, replace
-
-split, join
-
-Formatting
-
-Real Examples
-
-Common Errors
-
-Assignment
-
-✅ DAY 08: Lists
-
-Revision
-
-List Basics
-
-Indexing & Slicing
-
-Modifying Lists
-
-Adding Elements
-
-Removing Elements
-
-len()
-
-Membership
-
-Iteration
-
-List Methods
-
-Nested Lists
-
-Copy Concepts (Basic)
-
-Common Mistakes
-
-Practice
-
-Assignment
-
-✅ DAY 09: Tuples & Sets
-
-Revision
-
-Tuple Basics
-
-Indexing & Slicing
-
-Immutability
-
-Packing & Unpacking
-
-Tuple Methods
-
-Set Basics
-
-Unique Properties
-
-Add/Remove Elements
-
-Set Operations
-
-Membership
-
-Real Examples
-
-Common Errors
-
-Assignment
-
-✅ DAY 10: Dictionaries
-
-Revision
-
-Dictionary Basics
-
-Key-Value Concept
-
-Accessing Values
-
-get() Method
-
-Add & Update
-
-Remove Elements
-
-len()
-
-Iteration
-
-keys(), values(), items()
-
-Nested Dictionaries
-
-Dictionary Comprehension (Intro)
-
-Common Errors
-
-Practice
-
-Assignment
+---
