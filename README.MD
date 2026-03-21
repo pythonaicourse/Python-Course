@@ -96,14 +96,17 @@ print("Hello from Jupyter 😎")
 ✨ Output will appear below the code!
 
 😂 Part 3: Fun Programs
+
 🎯 Program 1: Name Greeting
+
 name = input("Enter your name: ")
 print("Hello", name, "welcome to Python world 😄")
+
 🎯 Program 2: Celebrity Fun
 name = input("Enter your name: ")
 fav = input("Enter your favorite actor/actress: ")
-
 print(name, "dreams to meet", fav, "one day 😄🔥")
+
 🎯 Program 3: Exam Result
 name = input("Enter your name: ")
 marks = int(input("Enter your marks: "))
