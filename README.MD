@@ -1,329 +1,264 @@
 📘 Python 30-Day Syllabus
 
-✅ DAY 01: Introduction & Setup
+# 📘 Day05 Notes
 
-Course Overview:
+## 🔹 Type Casting
 
-What is Programming?
+We can convert one type value to another type. This conversion is called **Typecasting** or **Type coercion**.
 
-Introduction to Python
+The following are various inbuilt functions for type casting:
 
-History of Python
+1. `int()`
+2. `float()`
+3. `complex()`
+4. `bool()`
+5. `str()`
 
-Features of Python
+---
 
-Python vs C / Java
+## 🔹 1. int()
 
-Python Installation (Windows)
+We can use this function to convert values from other types to int.
 
-VS Code Setup
+```
+>>> int(123.987)
+123
 
-First Python Program
+>>> int(10+5j)
+TypeError: can't convert complex to int
 
-print() Function Basics
+>>> int(True)
+1
 
-Understanding Output
+>>> int(False)
+0
 
-Creating & Saving .py Files
+>>> int("10")
+10
 
-Terminal / Command Line Basics
+>>> int("10.5")
+ValueError: invalid literal for int() with base 10: '10.5'
 
-Common Beginner Mistakes
+>>> int("ten")
+ValueError: invalid literal for int() with base 10: 'ten'
 
-Practice Guidelines
+>>> int("0B1111")
+ValueError: invalid literal for int() with base 10: '0B1111'
+```
 
-GitHub Repository Introduction
+### ✅ Note:
 
-How to Use Course Materials
+* We can convert from any type to int **except complex type**.
+* To convert `str` → `int`, the string must contain **only integral values in base-10**.
 
-Daily Study Plan
+---
 
-Assignment
+## 🔹 2. float()
 
-Q&A + Next Day Preview
+We can use `float()` function to convert other type values to float.
 
-✅ DAY 02: Variables & Data Types
+```
+>>> float(10)
+10.0
 
-Revision
+>>> float(10+5j)
+TypeError: can't convert complex to float
 
-What is a Variable?
+>>> float(True)
+1.0
 
-Naming Rules
+>>> float(False)
+0.0
 
-Assigning Values
+>>> float("10")
+10.0
 
-Multiple Assignment
+>>> float("10.5")
+10.5
 
-Memory Basics
+>>> float("ten")
+ValueError: could not convert string to float: 'ten'
 
-Data Types Overview
+>>> float("0B1111")
+ValueError: could not convert string to float: '0B1111'
+```
 
-int, float, str, bool
+### ✅ Note:
 
-type() Function
+* We can convert any type to float **except complex type**.
+* String must be **integer or floating-point literal in base-10**.
 
-Type Casting
+---
 
-Dynamic Typing
+## 🔹 3. complex()
 
-Static vs Dynamic Typing
+We can use `complex()` function to convert other types to complex type.
 
-Reassigning Variables
+### ▶ Form-1: `complex(x)`
 
-Common Mistakes
+Converts `x` into a complex number with imaginary part `0`.
 
-Practice Programs
+```
+complex(10) ==> 10+0j
+complex(10.5) ==> 10.5+0j
+complex(True) ==> 1+0j
+complex(False) ==> 0j
+complex("10") ==> 10+0j
+complex("10.5") ==> 10.5+0j
 
-Assignment
+complex("ten")
+ValueError: complex() arg is a malformed string
+```
 
-✅ DAY 03: Input & Output
+### ▶ Form-2: `complex(x, y)`
 
-Revision
+`x` → real part, `y` → imaginary part
 
-Input vs Output
+```
+complex(10,-2) ==> 10-2j
+complex(True,False) ==> 1+0j
+```
 
-input() Function
+---
 
-String Input
+## 🔹 4. bool()
 
-Numeric Input (Casting)
+We can use this function to convert other type values to boolean.
 
-print() Advanced Usage
+```
+bool(0) ==> False
+bool(1) ==> True
+bool(10) ==> True
+bool(10.5) ==> True
+bool(0.178) ==> True
+bool(0.0) ==> False
+bool(10-2j) ==> True
+bool(0+1.5j) ==> True
+bool(0+0j) ==> False
+bool("True") ==> True
+bool("False") ==> True
+bool("") ==> False
+```
 
-sep and end
+---
 
-String Formatting
+## 🔹 5. str()
 
-+, ,, format()
+We can use this method to convert other type values to string.
 
-f-Strings
+```
+>>> str(10)
+'10'
 
-Multiple Inputs
+>>> str(10.5)
+'10.5'
 
-Real-Life Examples
+>>> str(10+5j)
+'(10+5j)'
 
-Common Errors
+>>> str(True)
+'True'
+```
 
-Practice
+---
 
-Assignment
+## 🔹 Fundamental Data Types vs Immutability
 
-✅ DAY 04: Operators & Expressions
+All fundamental data types are **immutable**.
 
-Revision
+👉 Once we create an object, we cannot change it.
+👉 If we try to modify it, a **new object is created**.
 
-Arithmetic Operators
+### Why immutability?
 
-Floor Division vs Division
+Python checks:
 
-Power Operator
+* If an object already exists → reuse it
+* Else → create a new object
 
-Comparison Operators
+### Advantages:
 
-Logical Operators
+* Better memory utilization
+* Improved performance
 
-Assignment Operators
+### Problem without immutability:
 
-Identity Operators
+If multiple references point to the same object, modifying it affects all references.
 
-Membership Operators
+👉 To prevent this, immutability is enforced.
 
-Operator Precedence
+### Example:
 
-Expressions
+```
+>>> a = 10
+>>> b = 10
 
-Boolean Logic
+>>> a is b
+>>> id(a)
+>>> id(b)
+```
 
-Calculator Program
+---
 
-Common Mistakes
+## 🔹 bytes Data Type
 
-Practice
+Represents a group of byte numbers (like an array).
 
-Assignment
+### ✅ Conclusion 1:
 
-✅ DAY 05: Conditional Statements
+* Allowed values: **0 to 255**
+* Otherwise → `ValueError`
 
-Revision
+### ✅ Conclusion 2:
 
-Decision Making
+* Bytes are **immutable**
+* Cannot modify elements → `TypeError`
 
-if Statement
+### Example:
 
-if-else
+```
+>>> x = [10,20,30,40]
+>>> b = bytes(x)
 
-elif Ladder
+>>> b[0] = 100
+```
 
-Nested Conditions
+---
 
-Flow of Execution
+## 🔹 bytearray Data Type
 
-Real-Life Examples
+Same as `bytes`, but **mutable** (can be changed).
 
-Even/Odd Program
+### Example 1:
 
-Grade System
+```
+x = [10,20,30,40]
+b = bytearray(x)
 
-Max of Three Numbers
+for i in b:
+    print(i)
 
-Common Errors
+10
+20
+30
+40
 
-Practice
+b[0] = 100
 
-Assignment
+for i in b:
+    print(i)
 
-✅ DAY 06: Loops
+100
+20
+30
+40
+```
 
-Revision
+### Example 2:
 
-while Loop
+```
+>>> x = [10,256]
+```
 
-Infinite Loops
+---
 
-break, continue, pass
-
-for Loop
-
-range()
-
-Step Values
-
-Nested Loops
-
-Loop with else
-
-Pattern Programs
-
-Sum & Factorial
-
-Common Mistakes
-
-Practice
-
-Assignment
-
-✅ DAY 07: Strings
-
-Revision
-
-String Basics
-
-Indexing & Slicing
-
-Negative Indexing
-
-String Immutability
-
-Operators (+, *)
-
-len()
-
-Membership Operators
-
-String Methods
-
-strip, find, replace
-
-split, join
-
-Formatting
-
-Real Examples
-
-Common Errors
-
-Assignment
-
-✅ DAY 08: Lists
-
-Revision
-
-List Basics
-
-Indexing & Slicing
-
-Modifying Lists
-
-Adding Elements
-
-Removing Elements
-
-len()
-
-Membership
-
-Iteration
-
-List Methods
-
-Nested Lists
-
-Copy Concepts (Basic)
-
-Common Mistakes
-
-Practice
-
-Assignment
-
-✅ DAY 09: Tuples & Sets
-
-Revision
-
-Tuple Basics
-
-Indexing & Slicing
-
-Immutability
-
-Packing & Unpacking
-
-Tuple Methods
-
-Set Basics
-
-Unique Properties
-
-Add/Remove Elements
-
-Set Operations
-
-Membership
-
-Real Examples
-
-Common Errors
-
-Assignment
-
-✅ DAY 10: Dictionaries
-
-Revision
-
-Dictionary Basics
-
-Key-Value Concept
-
-Accessing Values
-
-get() Method
-
-Add & Update
-
-Remove Elements
-
-len()
-
-Iteration
-
-keys(), values(), items()
-
-Nested Dictionaries
-
-Dictionary Comprehension (Intro)
-
-Common Errors
-
-Practice
-
-Assignment
