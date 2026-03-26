@@ -1,329 +1,244 @@
 📘 Python 30-Day Syllabus
 
-✅ DAY 01: Introduction & Setup
+🎬 **DAY 06 – PYTHON OPERATORS (Full Script)**
 
-Course Overview:
+---
 
-What is Programming?
+🎯 **HOOK (First 5 seconds)**
 
-Introduction to Python
+“Do you think Python is just for printing Hello World? 😄
+What if I show you… Python can work like a powerful calculator and decision maker? 🔥”
 
-History of Python
+---
 
-Features of Python
+👋 **INTRO**
 
-Python vs C / Java
+Hello friends… welcome back to Day 06 🚀
 
-Python Installation (Windows)
+In today’s session, we are going to learn:
 
-VS Code Setup
+👉 Python Operators
 
-First Python Program
+Operators are very very important…
+Without operators, we cannot perform any operations in programming.
 
-print() Function Basics
+---
 
-Understanding Output
+# 🧠 **PART 1: What is an Operator?**
 
-Creating & Saving .py Files
+👉 Simple definition:
 
-Terminal / Command Line Basics
+“Operator is a symbol which performs an operation on values”
 
-Common Beginner Mistakes
+Example:
 
-Practice Guidelines
+👉 10 + 20
 
-GitHub Repository Introduction
+Here:
 
-How to Use Course Materials
+* 10, 20 → operands
+* * → operator
 
-Daily Study Plan
+---
 
-Assignment
+# ➕ **PART 2: Arithmetic Operators**
 
-Q&A + Next Day Preview
+Let’s start with basic operators:
 
-✅ DAY 02: Variables & Data Types
+```python
+a = 10
+b = 3
 
-Revision
+print(a + b)   # Addition
+print(a - b)   # Subtraction
+print(a * b)   # Multiplication
+print(a / b)   # Division
+print(a % b)   # Modulus
+print(a // b)  # Floor Division
+print(a ** b)  # Power
+```
 
-What is a Variable?
+---
 
-Naming Rules
+💡 **Explain Like This:**
 
-Assigning Values
+👉 `/` gives decimal
+👉 `//` removes decimal
 
-Multiple Assignment
+Example:
+👉 10 / 3 = 3.33
+👉 10 // 3 = 3
 
-Memory Basics
+---
 
-Data Types Overview
+😂 **Fun Line**
 
-int, float, str, bool
+“Normal division is like real life…
+Floor division is like strict teacher… no decimals allowed 😄”
 
-type() Function
+---
 
-Type Casting
+# 🔍 **PART 3: Comparison Operators**
 
-Dynamic Typing
+Used to compare values:
 
-Static vs Dynamic Typing
+```python
+a = 10
+b = 20
 
-Reassigning Variables
+print(a > b)
+print(a < b)
+print(a == b)
+print(a != b)
+```
 
-Common Mistakes
+---
 
-Practice Programs
+👉 Output is always:
 
-Assignment
+✔ True or False (Boolean)
 
-✅ DAY 03: Input & Output
+---
 
-Revision
+💡 **Real-Life Example**
 
-Input vs Output
+“Checking marks…
+Is marks > 50? → pass or fail”
 
-input() Function
+---
 
-String Input
+# 🔗 **PART 4: Logical Operators**
 
-Numeric Input (Casting)
+```python
+age = 20
+has_id = True
 
-print() Advanced Usage
+print(age >= 18 and has_id)
+```
 
-sep and end
+---
 
-String Formatting
+👉 Explain:
 
-+, ,, format()
+* `and` → both must be true
+* `or` → at least one true
+* `not` → reverse
 
-f-Strings
+---
 
-Multiple Inputs
+😂 **Fun Line**
 
-Real-Life Examples
+“and condition is like strict parents… both conditions must be satisfied 😄”
 
-Common Errors
+---
 
-Practice
+# 🆔 **PART 5: Identity Operators**
 
-Assignment
+```python
+a = 10
+b = 10
 
-✅ DAY 04: Operators & Expressions
+print(a is b)
+print(a is not b)
+```
 
-Revision
+👉 Checks memory (same object or not)
 
-Arithmetic Operators
+---
 
-Floor Division vs Division
+# 📦 **PART 6: Membership Operators**
 
-Power Operator
+```python
+name = "python"
 
-Comparison Operators
+print("p" in name)
+print("z" not in name)
+```
 
-Logical Operators
+👉 Used in strings, lists
 
-Assignment Operators
+---
 
-Identity Operators
+# 🚀 🎯 **MINI PROJECT: SIMPLE CALCULATOR**
 
-Membership Operators
+Now let’s build something practical.
 
-Operator Precedence
+```python
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
 
-Expressions
+print("Addition:", a + b)
+print("Subtraction:", a - b)
+print("Multiplication:", a * b)
+print("Division:", a / b)
+```
 
-Boolean Logic
+---
 
-Calculator Program
+👉 Say:
 
-Common Mistakes
+“This is how calculator apps start… simple logic, but powerful idea 🔥”
 
-Practice
+---
 
-Assignment
+# 🚀 🎯 **PROJECT 2: EVEN OR ODD CHECKER**
 
-✅ DAY 05: Conditional Statements
+```python
+num = int(input("Enter a number: "))
 
-Revision
+if num % 2 == 0:
+    print("Even Number ✅")
+else:
+    print("Odd Number ❌")
+```
 
-Decision Making
+---
 
-if Statement
+💡 Explain:
 
-if-else
+“% gives remainder…
+If remainder = 0 → even number”
 
-elif Ladder
+---
 
-Nested Conditions
+# 🚀 🎯 **PROJECT 3: LOGIN CHECK (REAL-WORLD)**
 
-Flow of Execution
+```python
+username = input("Enter username: ")
+password = input("Enter password: ")
 
-Real-Life Examples
+if username == "admin" and password == "1234":
+    print("Login Success 🔥")
+else:
+    print("Invalid Credentials ❌")
+```
 
-Even/Odd Program
+---
 
-Grade System
+👉 Say:
 
-Max of Three Numbers
+“This is exactly how apps validate login internally”
 
-Common Errors
+---
 
-Practice
+# 🎯 **ENDING**
 
-Assignment
+Today we learned:
 
-✅ DAY 06: Loops
+✔ Arithmetic Operators
+✔ Comparison Operators
+✔ Logical Operators
+✔ Real-world projects
 
-Revision
+---
 
-while Loop
+👉 Practice is very important
 
-Infinite Loops
+“Watching coding is like watching gym videos…
+You won’t get results unless you practice 😄”
 
-break, continue, pass
+---
 
-for Loop
+💬 Comment “DAY06” if you completed 💪🔥
 
-range()
-
-Step Values
-
-Nested Loops
-
-Loop with else
-
-Pattern Programs
-
-Sum & Factorial
-
-Common Mistakes
-
-Practice
-
-Assignment
-
-✅ DAY 07: Strings
-
-Revision
-
-String Basics
-
-Indexing & Slicing
-
-Negative Indexing
-
-String Immutability
-
-Operators (+, *)
-
-len()
-
-Membership Operators
-
-String Methods
-
-strip, find, replace
-
-split, join
-
-Formatting
-
-Real Examples
-
-Common Errors
-
-Assignment
-
-✅ DAY 08: Lists
-
-Revision
-
-List Basics
-
-Indexing & Slicing
-
-Modifying Lists
-
-Adding Elements
-
-Removing Elements
-
-len()
-
-Membership
-
-Iteration
-
-List Methods
-
-Nested Lists
-
-Copy Concepts (Basic)
-
-Common Mistakes
-
-Practice
-
-Assignment
-
-✅ DAY 09: Tuples & Sets
-
-Revision
-
-Tuple Basics
-
-Indexing & Slicing
-
-Immutability
-
-Packing & Unpacking
-
-Tuple Methods
-
-Set Basics
-
-Unique Properties
-
-Add/Remove Elements
-
-Set Operations
-
-Membership
-
-Real Examples
-
-Common Errors
-
-Assignment
-
-✅ DAY 10: Dictionaries
-
-Revision
-
-Dictionary Basics
-
-Key-Value Concept
-
-Accessing Values
-
-get() Method
-
-Add & Update
-
-Remove Elements
-
-len()
-
-Iteration
-
-keys(), values(), items()
-
-Nested Dictionaries
-
-Dictionary Comprehension (Intro)
-
-Common Errors
-
-Practice
-
-Assignment
+See you in Day 07 🚀
