@@ -1,329 +1,215 @@
 📘 Python 30-Day Syllabus
 
-✅ DAY 01: Introduction & Setup
+🎬 **DAY 07 – LISTS (Advanced Data Structures – Part 1)**
 
-Course Overview:
+---
 
-What is Programming?
+🎯 **HOOK (First 5–7 sec)**
 
-Introduction to Python
+“Till now we stored only one value in one variable…
+But what if I want to store 100 values? 😳
 
-History of Python
+That’s where Lists come into picture 🔥”
 
-Features of Python
+---
 
-Python vs C / Java
+👋 **INTRO**
 
-Python Installation (Windows)
+Hello friends, welcome back to Day 07 🚀
 
-VS Code Setup
+Today we are starting:
 
-First Python Program
+👉 Advanced Data Structures
 
-print() Function Basics
+And in today’s session, we will focus on:
 
-Understanding Output
+👉 **Lists in Python**
 
-Creating & Saving .py Files
+---
 
-Terminal / Command Line Basics
+# 🧠 **PART 1: What is a List?**
 
-Common Beginner Mistakes
+👉 Definition:
 
-Practice Guidelines
+“A list is a collection of multiple values stored in a single variable”
 
-GitHub Repository Introduction
+---
 
-How to Use Course Materials
+### 💻 Example:
 
-Daily Study Plan
+```python
+numbers = [10, 20, 30, 40]
+```
 
-Assignment
+---
 
-Q&A + Next Day Preview
+💡 Say:
 
-✅ DAY 02: Variables & Data Types
+“Instead of creating 4 variables… we can store everything in one list”
 
-Revision
+---
 
-What is a Variable?
+# 🧠 **PART 2: List with Different Data Types**
 
-Naming Rules
+```python
+data = [10, 3.5, "Python", True]
+```
 
-Assigning Values
+👉 Explain:
 
-Multiple Assignment
+“List can store multiple data types at the same time”
 
-Memory Basics
+---
 
-Data Types Overview
+# 🧠 **PART 3: Accessing Elements (Indexing)**
 
-int, float, str, bool
+```python
+names = ["Rahul", "Ravi", "Priya"]
 
-type() Function
+print(names[0])
+print(names[-1])
+```
 
-Type Casting
+---
 
-Dynamic Typing
+💡 Explain:
 
-Static vs Dynamic Typing
+0 → first
+-1 → last
 
-Reassigning Variables
+---
 
-Common Mistakes
+😂 Fun Line:
 
-Practice Programs
+“Negative indexing is like going from backside 😄”
 
-Assignment
+---
 
-✅ DAY 03: Input & Output
+# 🧠 **PART 4: Slicing Lists**
 
-Revision
+```python
+nums = [10, 20, 30, 40, 50]
 
-Input vs Output
+print(nums[1:4])
+```
 
-input() Function
+---
 
-String Input
+👉 Explain:
 
-Numeric Input (Casting)
+“Slicing means taking a portion of list”
 
-print() Advanced Usage
+---
 
-sep and end
+# 🧠 **PART 5: Modify List**
 
-String Formatting
+```python
+nums = [10, 20, 30]
 
-+, ,, format()
+nums[1] = 99
+print(nums)
+```
 
-f-Strings
+👉 Lists are **mutable** (can change)
 
-Multiple Inputs
+---
 
-Real-Life Examples
+# 🧠 **PART 6: Adding Elements**
 
-Common Errors
+```python
+nums = [10, 20]
 
-Practice
+nums.append(30)
+nums.insert(1, 15)
 
-Assignment
+print(nums)
+```
 
-✅ DAY 04: Operators & Expressions
+---
 
-Revision
+# 🧠 **PART 7: Removing Elements**
 
-Arithmetic Operators
+```python
+nums = [10, 20, 30]
 
-Floor Division vs Division
+nums.remove(20)
+nums.pop()
 
-Power Operator
+print(nums)
+```
 
-Comparison Operators
+---
 
-Logical Operators
+# 🧠 **PART 8: Loop Through List**
 
-Assignment Operators
+```python
+nums = [10, 20, 30]
 
-Identity Operators
+for i in nums:
+    print(i)
+```
 
-Membership Operators
+---
 
-Operator Precedence
+💡 Say:
 
-Expressions
+“This is how real applications process data”
 
-Boolean Logic
+---
 
-Calculator Program
+# 🚀 🎯 **MINI PROJECT: STUDENT MARKS SYSTEM**
 
-Common Mistakes
+👉 Very powerful example
 
-Practice
+```python
+marks = []
 
-Assignment
+n = int(input("Enter number of students: "))
 
-✅ DAY 05: Conditional Statements
+for i in range(n):
+    m = int(input("Enter marks: "))
+    marks.append(m)
 
-Revision
+print("All Marks:", marks)
 
-Decision Making
+print("Maximum Marks:", max(marks))
+print("Minimum Marks:", min(marks))
+print("Total Marks:", sum(marks))
+print("Average:", sum(marks)/len(marks))
+```
 
-if Statement
+---
 
-if-else
+# 🎯 🗣️ **Explain Like This**
 
-elif Ladder
+👉 Say:
 
-Nested Conditions
+“This is exactly how systems store and process student data…
+We are doing same thing using lists 🔥”
 
-Flow of Execution
+---
 
-Real-Life Examples
+# 😂 FUN LINE
 
-Even/Odd Program
+“List is like your friend group…
+You can add, remove, and manage easily 😄”
 
-Grade System
+---
 
-Max of Three Numbers
+# 🎯 **ENDING**
 
-Common Errors
+Today we learned:
 
-Practice
+✔ What is List
+✔ Indexing & Slicing
+✔ Add & Remove
+✔ Looping
+✔ Real-world mini project
 
-Assignment
+---
 
-✅ DAY 06: Loops
+👉 Practice is very important
 
-Revision
+💬 Comment “DAY07” if completed 💪🔥
 
-while Loop
-
-Infinite Loops
-
-break, continue, pass
-
-for Loop
-
-range()
-
-Step Values
-
-Nested Loops
-
-Loop with else
-
-Pattern Programs
-
-Sum & Factorial
-
-Common Mistakes
-
-Practice
-
-Assignment
-
-✅ DAY 07: Strings
-
-Revision
-
-String Basics
-
-Indexing & Slicing
-
-Negative Indexing
-
-String Immutability
-
-Operators (+, *)
-
-len()
-
-Membership Operators
-
-String Methods
-
-strip, find, replace
-
-split, join
-
-Formatting
-
-Real Examples
-
-Common Errors
-
-Assignment
-
-✅ DAY 08: Lists
-
-Revision
-
-List Basics
-
-Indexing & Slicing
-
-Modifying Lists
-
-Adding Elements
-
-Removing Elements
-
-len()
-
-Membership
-
-Iteration
-
-List Methods
-
-Nested Lists
-
-Copy Concepts (Basic)
-
-Common Mistakes
-
-Practice
-
-Assignment
-
-✅ DAY 09: Tuples & Sets
-
-Revision
-
-Tuple Basics
-
-Indexing & Slicing
-
-Immutability
-
-Packing & Unpacking
-
-Tuple Methods
-
-Set Basics
-
-Unique Properties
-
-Add/Remove Elements
-
-Set Operations
-
-Membership
-
-Real Examples
-
-Common Errors
-
-Assignment
-
-✅ DAY 10: Dictionaries
-
-Revision
-
-Dictionary Basics
-
-Key-Value Concept
-
-Accessing Values
-
-get() Method
-
-Add & Update
-
-Remove Elements
-
-len()
-
-Iteration
-
-keys(), values(), items()
-
-Nested Dictionaries
-
-Dictionary Comprehension (Intro)
-
-Common Errors
-
-Practice
-
-Assignment
+See you in next session 🚀
