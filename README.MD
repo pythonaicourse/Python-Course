@@ -1,329 +1,117 @@
 📘 Python 30-Day Syllabus
+Day09
 
-✅ DAY 01: Introduction & Setup
+🧠 ✅ What is Set?
 
-Course Overview:
+👉 If we want to represent a group of unique values as a single entity, then we use Set
 
-What is Programming?
+⚡ Key Properties of Set
 
-Introduction to Python
+✔ Duplicates are NOT allowed
+✔ Insertion order is NOT preserved
+✔ Indexing & slicing are NOT allowed
+✔ Set is mutable (can modify)
 
-History of Python
+💻 ✅ How to Create Set
+s = {10, 20, 30, 40}
+print(s)
+print(type(s))
+❗ Duplicate Example
+s = {10, 20, 20, 30}
+print(s)
 
-Features of Python
+👉 Output:
 
-Python vs C / Java
+{10, 20, 30}
 
-Python Installation (Windows)
+👉 💡 Duplicate automatically removed 🔥
 
-VS Code Setup
+🛠️ ✅ Important Functions of Set
+🔹 1. add()
 
-First Python Program
+👉 Adds single element
 
-print() Function Basics
+s = {10, 20, 30}
+s.add(50)
+print(s)
+🔹 2. update()
 
-Understanding Output
+👉 Adds multiple elements
 
-Creating & Saving .py Files
+s = {10, 20}
+l = [30, 40, 50]
 
-Terminal / Command Line Basics
+s.update(l, range(2))
+print(s)
+🔹 3. copy()
 
-Common Beginner Mistakes
+👉 Creates duplicate set
 
-Practice Guidelines
+s = {10, 20, 30}
+s1 = s.copy()
 
-GitHub Repository Introduction
+print(s1)
+🔹 4. pop()
 
-How to Use Course Materials
+👉 Removes random element
 
-Daily Study Plan
+s = {10, 20, 30}
+print(s.pop())
+print(s)
 
-Assignment
+👉 💡 Random element removed 😳
 
-Q&A + Next Day Preview
+🔹 5. remove()
 
-✅ DAY 02: Variables & Data Types
+👉 Removes specific element
 
-Revision
+s = {10, 20, 30}
+s.remove(20)
+print(s)
+🔢 ✅ Mathematical Operations
+🔹 1. union()
 
-What is a Variable?
+👉 Combine two sets
 
-Naming Rules
+s = {10, 20, 30}
+s1 = {30, 40, 50}
 
-Assigning Values
+print(s.union(s1))
+🔹 2. intersection()
 
-Multiple Assignment
+👉 Common elements
 
-Memory Basics
+s = {10, 20, 30}
+s1 = {20, 30, 40}
 
-Data Types Overview
+print(s.intersection(s1))
+🔹 3. difference()
 
-int, float, str, bool
+👉 Unique elements
 
-type() Function
+s = {10, 20, 30}
+s1 = {20, 30, 40}
 
-Type Casting
+print(s.difference(s1))
+🔍 ✅ Membership Operators
+s = set("python")
 
-Dynamic Typing
+print(s)
+print('p' in s)
+print('z' not in s)
+🚀 🎯 REAL-TIME MINI PROJECT
+🛒 E-Commerce Unique Users System
 
-Static vs Dynamic Typing
+👉 In real applications like Amazon, Flipkart
+we should not store duplicate users
 
-Reassigning Variables
+users = set()
 
-Common Mistakes
+n = int(input("Enter number of users visiting the site: "))
 
-Practice Programs
+for i in range(n):
+    name = input("Enter user name: ")
+    users.add(name)
 
-Assignment
-
-✅ DAY 03: Input & Output
-
-Revision
-
-Input vs Output
-
-input() Function
-
-String Input
-
-Numeric Input (Casting)
-
-print() Advanced Usage
-
-sep and end
-
-String Formatting
-
-+, ,, format()
-
-f-Strings
-
-Multiple Inputs
-
-Real-Life Examples
-
-Common Errors
-
-Practice
-
-Assignment
-
-✅ DAY 04: Operators & Expressions
-
-Revision
-
-Arithmetic Operators
-
-Floor Division vs Division
-
-Power Operator
-
-Comparison Operators
-
-Logical Operators
-
-Assignment Operators
-
-Identity Operators
-
-Membership Operators
-
-Operator Precedence
-
-Expressions
-
-Boolean Logic
-
-Calculator Program
-
-Common Mistakes
-
-Practice
-
-Assignment
-
-✅ DAY 05: Conditional Statements
-
-Revision
-
-Decision Making
-
-if Statement
-
-if-else
-
-elif Ladder
-
-Nested Conditions
-
-Flow of Execution
-
-Real-Life Examples
-
-Even/Odd Program
-
-Grade System
-
-Max of Three Numbers
-
-Common Errors
-
-Practice
-
-Assignment
-
-✅ DAY 06: Loops
-
-Revision
-
-while Loop
-
-Infinite Loops
-
-break, continue, pass
-
-for Loop
-
-range()
-
-Step Values
-
-Nested Loops
-
-Loop with else
-
-Pattern Programs
-
-Sum & Factorial
-
-Common Mistakes
-
-Practice
-
-Assignment
-
-✅ DAY 07: Strings
-
-Revision
-
-String Basics
-
-Indexing & Slicing
-
-Negative Indexing
-
-String Immutability
-
-Operators (+, *)
-
-len()
-
-Membership Operators
-
-String Methods
-
-strip, find, replace
-
-split, join
-
-Formatting
-
-Real Examples
-
-Common Errors
-
-Assignment
-
-✅ DAY 08: Lists
-
-Revision
-
-List Basics
-
-Indexing & Slicing
-
-Modifying Lists
-
-Adding Elements
-
-Removing Elements
-
-len()
-
-Membership
-
-Iteration
-
-List Methods
-
-Nested Lists
-
-Copy Concepts (Basic)
-
-Common Mistakes
-
-Practice
-
-Assignment
-
-✅ DAY 09: Tuples & Sets
-
-Revision
-
-Tuple Basics
-
-Indexing & Slicing
-
-Immutability
-
-Packing & Unpacking
-
-Tuple Methods
-
-Set Basics
-
-Unique Properties
-
-Add/Remove Elements
-
-Set Operations
-
-Membership
-
-Real Examples
-
-Common Errors
-
-Assignment
-
-✅ DAY 10: Dictionaries
-
-Revision
-
-Dictionary Basics
-
-Key-Value Concept
-
-Accessing Values
-
-get() Method
-
-Add & Update
-
-Remove Elements
-
-len()
-
-Iteration
-
-keys(), values(), items()
-
-Nested Dictionaries
-
-Dictionary Comprehension (Intro)
-
-Common Errors
-
-Practice
-
-Assignment
+print("Unique Users:", users)
+print("Total Unique Users:", len(users))
