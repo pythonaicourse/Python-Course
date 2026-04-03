@@ -1,329 +1,148 @@
 📘 Python 30-Day Syllabus
 
-✅ DAY 01: Introduction & Setup
+📘 🚀 DAY 12 – FUNCTIONS (PART 02) NOTES
+🧠 ✅ Types of Arguments
+Positional Arguments
+Keyword Arguments
+Default Arguments
+Variable Length Arguments
+🔹 ✅ 3. Default Arguments
 
-Course Overview:
+👉 Sometimes we can provide default values to function parameters.
 
-What is Programming?
+👉 If the user does not pass a value, default will be used.
 
-Introduction to Python
+💻 Example:
+def wish(name="Guest"):
+    print("Hello", name, "Welcome to this site")
 
-History of Python
+wish("Venky")
+wish()
 
-Features of Python
+👉 💡 Output:
 
-Python vs C / Java
+Hello Venky Welcome to this site
+Hello Guest Welcome to this site
+🎯 Real-Time Example
 
-Python Installation (Windows)
+👉 Login system:
 
-VS Code Setup
+def login(user="Guest"):
+    print("Welcome", user)
 
-First Python Program
+login("Rahul")
+login()
 
-print() Function Basics
+👉 💡 Use Case:
 
-Understanding Output
+Default user login
+Optional inputs
+🔹 ✅ *4. Variable Length Arguments (args)
 
-Creating & Saving .py Files
+👉 Sometimes we don’t know how many inputs user will give
+👉 We use *args
 
-Terminal / Command Line Basics
+💻 Example:
+def total_sum(*n):
+    total = 0
+    for n1 in n:
+        total = total + n1
+    print("The sum =", total)
 
-Common Beginner Mistakes
+total_sum()
+total_sum(10)
+total_sum(10, 20)
+total_sum(10, 20, 30)
+🎯 Real-Time Example
 
-Practice Guidelines
+👉 Shopping Cart:
 
-GitHub Repository Introduction
+def cart_total(*prices):
+    print("Total Bill:", sum(prices))
 
-How to Use Course Materials
+cart_total(100, 200, 300)
 
-Daily Study Plan
+👉 💡 Use Case:
 
-Assignment
+E-commerce billing
+Dynamic inputs
+🌍 ✅ Types of Variables
+Local Variables
+Global Variables
+🔹 ✅ Global Variables
 
-Q&A + Next Day Preview
+👉 Variables declared outside the function
 
-✅ DAY 02: Variables & Data Types
+a = 10
 
-Revision
+def f1():
+    print(a)
 
-What is a Variable?
+def f2():
+    print(a)
 
-Naming Rules
+f1()
+f2()
 
-Assigning Values
+👉 💡 Use Case:
 
-Multiple Assignment
+Configuration values
+Shared data
+🔹 ✅ Local Variables
 
-Memory Basics
+👉 Variables declared inside a function
 
-Data Types Overview
+def f1():
+    a = 10
+    print(a)
 
-int, float, str, bool
+f1()
 
-type() Function
+👉 💡 Important:
 
-Type Casting
-
-Dynamic Typing
-
-Static vs Dynamic Typing
-
-Reassigning Variables
-
-Common Mistakes
-
-Practice Programs
-
-Assignment
-
-✅ DAY 03: Input & Output
-
-Revision
-
-Input vs Output
-
-input() Function
-
-String Input
-
-Numeric Input (Casting)
-
-print() Advanced Usage
-
-sep and end
-
-String Formatting
-
-+, ,, format()
-
-f-Strings
-
-Multiple Inputs
-
-Real-Life Examples
-
-Common Errors
-
-Practice
-
-Assignment
-
-✅ DAY 04: Operators & Expressions
-
-Revision
-
-Arithmetic Operators
-
-Floor Division vs Division
-
-Power Operator
-
-Comparison Operators
-
-Logical Operators
-
-Assignment Operators
-
-Identity Operators
-
-Membership Operators
-
-Operator Precedence
-
-Expressions
-
-Boolean Logic
-
-Calculator Program
-
-Common Mistakes
-
-Practice
-
-Assignment
-
-✅ DAY 05: Conditional Statements
-
-Revision
-
-Decision Making
-
-if Statement
-
-if-else
-
-elif Ladder
-
-Nested Conditions
-
-Flow of Execution
-
-Real-Life Examples
-
-Even/Odd Program
-
-Grade System
-
-Max of Three Numbers
-
-Common Errors
-
-Practice
-
-Assignment
-
-✅ DAY 06: Loops
-
-Revision
-
-while Loop
-
-Infinite Loops
-
-break, continue, pass
-
-for Loop
-
-range()
-
-Step Values
-
-Nested Loops
-
-Loop with else
-
-Pattern Programs
-
-Sum & Factorial
-
-Common Mistakes
-
-Practice
-
-Assignment
-
-✅ DAY 07: Strings
-
-Revision
-
-String Basics
-
-Indexing & Slicing
-
-Negative Indexing
-
-String Immutability
-
-Operators (+, *)
-
-len()
-
-Membership Operators
-
-String Methods
-
-strip, find, replace
-
-split, join
-
-Formatting
-
-Real Examples
-
-Common Errors
-
-Assignment
-
-✅ DAY 08: Lists
-
-Revision
-
-List Basics
-
-Indexing & Slicing
-
-Modifying Lists
-
-Adding Elements
-
-Removing Elements
-
-len()
-
-Membership
-
-Iteration
-
-List Methods
-
-Nested Lists
-
-Copy Concepts (Basic)
-
-Common Mistakes
-
-Practice
-
-Assignment
-
-✅ DAY 09: Tuples & Sets
-
-Revision
-
-Tuple Basics
-
-Indexing & Slicing
-
-Immutability
-
-Packing & Unpacking
-
-Tuple Methods
-
-Set Basics
-
-Unique Properties
-
-Add/Remove Elements
-
-Set Operations
-
-Membership
-
-Real Examples
-
-Common Errors
-
-Assignment
-
-✅ DAY 10: Dictionaries
-
-Revision
-
-Dictionary Basics
-
-Key-Value Concept
-
-Accessing Values
-
-get() Method
-
-Add & Update
-
-Remove Elements
-
-len()
-
-Iteration
-
-keys(), values(), items()
-
-Nested Dictionaries
-
-Dictionary Comprehension (Intro)
-
-Common Errors
-
-Practice
-
-Assignment
+Local variables cannot be accessed outside the function
+🔁 ✅ Recursive Functions
+
+👉 A function that calls itself is called recursion
+
+💻 Example: Factorial
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
+
+print(factorial(5))
+
+👉 💡 Real-Time Example:
+
+Calculations
+Tree structures
+AI algorithms
+⚡ ✅ Anonymous (Lambda) Functions
+
+👉 Functions without name
+
+🔹 Normal Function
+def square(n):
+    return n * n
+🔹 Lambda Function
+s = lambda n: n * n
+print("The square of 4 is:", s(4))
+🎯 Real-Time Example
+numbers = [1, 2, 3, 4]
+
+squares = list(map(lambda x: x*x, numbers))
+print(squares)
+
+👉 💡 Use Case:
+
+Short operations
+Data processing
+🎯 🧠 FINAL SUMMARY
+
+✔ Default Arguments → Default values
+✔ *args → Multiple inputs
+✔ Local vs Global variables
+✔ Recursion → Function calling itself
+✔ Lambda → Short functions
