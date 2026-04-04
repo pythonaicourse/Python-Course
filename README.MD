@@ -42,7 +42,7 @@ if marks >= 50:
 else:
     print("Fail")
 
-👉 💡 Say:
+
 
 “Every decision in real life → uses conditions”
 
@@ -67,7 +67,7 @@ for i in range(3):
         print("Verified")
         break
 
-👉 💡 Say:
+
 
 “Loop means repetition until condition is satisfied”
 
