@@ -1,329 +1,363 @@
 📘 Python 30-Day Syllabus
 
-✅ DAY 01: Introduction & Setup
+🧠 PART 1: What is Inheritance?
 
-Course Overview:
+👉 Definition:
 
-What is Programming?
+“Inheritance allows one class to acquire properties and methods of another class”
 
-Introduction to Python
+💡 Simple understanding:
 
-History of Python
+👉 Parent → Child
 
-Features of Python
+Child can use parent features
 
-Python vs C / Java
+💡 Real-life example:
 
-Python Installation (Windows)
+👉 Father → Child
 
-VS Code Setup
+Child inherits properties
 
-First Python Program
+❓ PART 2: Why Inheritance?
 
-print() Function Basics
+👉 Without inheritance:
 
-Understanding Output
+Code repetition ❌
+Hard to maintain ❌
 
-Creating & Saving .py Files
+👉 With inheritance:
 
-Terminal / Command Line Basics
+✔ Code reuse
+✔ Clean structure
+✔ Easy maintenance
 
-Common Beginner Mistakes
+💡 Powerful line:
 
-Practice Guidelines
+“Don’t repeat code… reuse it 🔥”
 
-GitHub Repository Introduction
+🔥 PART 3: Basic Example
+class Parent:
+    def property(self):
+        print("This is parent property")
 
-How to Use Course Materials
+class Child(Parent):
+    pass
 
-Daily Study Plan
+c = Child()
+c.property()
 
+👉 Say:
+
+“Child class can directly use parent methods”
+
+🔥 PART 4: Adding Child Features
+class Parent:
+    def show(self):
+        print("Parent method")
+
+class Child(Parent):
+    def display(self):
+        print("Child method")
+
+c = Child()
+c.show()
+c.display()
+
+🧠 PART 5: TYPES OF INHERITANCE
+1️⃣ Single Inheritance
+
+👉 One parent → One child
+
+class A:
+    def method1(self):
+        print("A class")
+
+class B(A):
+    def method2(self):
+        print("B class")
+2️⃣ Multilevel Inheritance
+
+👉 Grandparent → Parent → Child
+
+class A:
+    def method1(self):
+        print("A")
+
+class B(A):
+    def method2(self):
+        print("B")
+
+class C(B):
+    def method3(self):
+        print("C")
+3️⃣ Multiple Inheritance
+
+👉 One child → multiple parents
+
+class A:
+    def m1(self):
+        print("A")
+
+class B:
+    def m2(self):
+        print("B")
+
+class C(A, B):
+    pass
+4️⃣ Hierarchical Inheritance
+
+👉 One parent → multiple children
+
+class A:
+    def show(self):
+        print("A")
+
+class B(A):
+    pass
+
+class C(A):
+    pass
+5️⃣ Hybrid Inheritance
+
+👉 Combination of multiple types
+
+
+
+“Combination of all inheritance types”
+
+🚀 🎯 REAL-TIME PROJECT 1: VEHICLE SYSTEM
+class Vehicle:
+    def start(self):
+        print("Vehicle started")
+
+class Car(Vehicle):
+    def drive(self):
+        print("Car driving")
+
+c = Car()
+c.start()
+c.drive()
+🚀 🎯 REAL-TIME PROJECT 2: EMPLOYEE SYSTEM
+class Employee:
+    def __init__(self, name):
+        self.name = name
+
+class Developer(Employee):
+    def work(self):
+        print(self.name, "is coding")
+
+d = Developer("Rahul")
+d.work()
+🚀 🎯 REAL-TIME PROJECT 3: ONLINE PLATFORM
+class User:
+    def login(self):
+        print("User login")
+
+class Admin(User):
+    def manage(self):
+        print("Admin managing system")
+
+a = Admin()
+a.login()
+a.manage()
+😂 FUN LINE
+
+“Inheritance is like family property…
+You don’t create it again, you inherit it 😄”
+
+🧠 ADVANCED POINT
+
+👉 Inheritance helps in:
+
+✔ Code reuse
+✔ Extensibility
+✔ Maintainable architecture
 Assignment
 
-Q&A + Next Day Preview
+🧠 PART 6: MRO (Method Resolution Order)
+🎯 SUPER DEFINITION
 
-✅ DAY 02: Variables & Data Types
+👉 “MRO defines the order in which Python searches for methods in inheritance”
 
-Revision
+💡 Simple line:
 
-What is a Variable?
+“When you call a method… Python checks classes in a specific order 🔥”
 
-Naming Rules
+❓ WHY MRO IS IMPORTANT
 
-Assigning Values
+👉 In multiple inheritance:
 
-Multiple Assignment
+Same method name in multiple classes 😳
+Which method should run?
 
-Memory Basics
+👉 Answer → MRO
 
-Data Types Overview
+🔥 BASIC EXAMPLE
+class A:
+    def show(self):
+        print("A class")
 
-int, float, str, bool
+class B(A):
+    pass
 
-type() Function
+class C(B):
+    pass
 
-Type Casting
+c = C()
+c.show()
 
-Dynamic Typing
+👉 Flow:
 
-Static vs Dynamic Typing
+C → B → A
 
-Reassigning Variables
+🔥 MULTIPLE INHERITANCE EXAMPLE
+class A:
+    def show(self):
+        print("A class")
 
-Common Mistakes
+class B:
+    def show(self):
+        print("B class")
 
-Practice Programs
+class C(A, B):
+    pass
 
-Assignment
+c = C()
+c.show()
 
-✅ DAY 03: Input & Output
+👉 Output:
 
-Revision
+👉 A class
 
-Input vs Output
+👉 Why?
 
-input() Function
+👉 MRO follows:
 
-String Input
+👉 Left → Right order
 
-Numeric Input (Casting)
+🧠 CHECK MRO ORDER
+print(C.mro())
 
-print() Advanced Usage
+👉 Output shows:
 
-sep and end
+👉 C → A → B → object
 
-String Formatting
 
-+, ,, format()
 
-f-Strings
+“This is the path Python follows to find methods”
 
-Multiple Inputs
+🚀 🎯 REAL-TIME EXAMPLE (MRO)
 
-Real-Life Examples
+👉 Scenario:
 
-Common Errors
+Multiple features in app
 
-Practice
+class Login:
+    def action(self):
+        print("Login feature")
 
-Assignment
+class Payment:
+    def action(self):
+        print("Payment feature")
 
-✅ DAY 04: Operators & Expressions
+class App(Login, Payment):
+    pass
 
-Revision
+a = App()
+a.action()
 
-Arithmetic Operators
+👉 Output:
 
-Floor Division vs Division
+👉 Login feature
 
-Power Operator
+👉 Because MRO → Login first
 
-Comparison Operators
+🔥 🧠 PART 7: super() METHOD
+🎯 SUPER DEFINITION
 
-Logical Operators
+👉 “super() is used to call parent class methods”
 
-Assignment Operators
+💡 Simple line:
 
-Identity Operators
+“Child can access parent using super() 🔥”
 
-Membership Operators
+🔥 BASIC EXAMPLE
+class Parent:
+    def show(self):
+        print("Parent method")
 
-Operator Precedence
+class Child(Parent):
+    def show(self):
+        super().show()
+        print("Child method")
 
-Expressions
+c = Child()
+c.show()
 
-Boolean Logic
+👉 Output:
 
-Calculator Program
+Parent method
+Child method
 
-Common Mistakes
+🧠 WHY super()?
 
-Practice
+👉 To reuse parent code
+👉 Avoid duplication
 
-Assignment
+🔥 CONSTRUCTOR WITH super()
+class Parent:
+    def __init__(self):
+        print("Parent constructor")
 
-✅ DAY 05: Conditional Statements
+class Child(Parent):
+    def __init__(self):
+        super().__init__()
+        print("Child constructor")
 
-Revision
+c = Child()
 
-Decision Making
+👉 Output:
 
-if Statement
+Parent constructor
+Child constructor
 
-if-else
+🚀 🎯 REAL-TIME PROJECT (super())
 
-elif Ladder
+👉 Scenario: Employee system
 
-Nested Conditions
+class Employee:
+    def __init__(self, name):
+        self.name = name
 
-Flow of Execution
+class Developer(Employee):
+    def __init__(self, name, skill):
+        super().__init__(name)
+        self.skill = skill
 
-Real-Life Examples
+    def show(self):
+        print(self.name, "is a", self.skill, "developer")
 
-Even/Odd Program
+d = Developer("Rahul", "Python")
+d.show()
 
-Grade System
+👉 Output:
 
-Max of Three Numbers
+Rahul is a Python developer
 
-Common Errors
+💡 Real-world:
 
-Practice
+👉 Parent → common data
+👉 Child → extra features
 
-Assignment
+😂 FUN LINE
 
-✅ DAY 06: Loops
+“MRO decides WHO to call 😄
+super() decides HOW to call 🔥”
 
-Revision
+🧠 ADVANCED INSIGHT
 
-while Loop
+👉 MRO uses:
 
-Infinite Loops
+👉 C3 Linearization algorithm
 
-break, continue, pass
 
-for Loop
-
-range()
-
-Step Values
-
-Nested Loops
-
-Loop with else
-
-Pattern Programs
-
-Sum & Factorial
-
-Common Mistakes
-
-Practice
-
-Assignment
-
-✅ DAY 07: Strings
-
-Revision
-
-String Basics
-
-Indexing & Slicing
-
-Negative Indexing
-
-String Immutability
-
-Operators (+, *)
-
-len()
-
-Membership Operators
-
-String Methods
-
-strip, find, replace
-
-split, join
-
-Formatting
-
-Real Examples
-
-Common Errors
-
-Assignment
-
-✅ DAY 08: Lists
-
-Revision
-
-List Basics
-
-Indexing & Slicing
-
-Modifying Lists
-
-Adding Elements
-
-Removing Elements
-
-len()
-
-Membership
-
-Iteration
-
-List Methods
-
-Nested Lists
-
-Copy Concepts (Basic)
-
-Common Mistakes
-
-Practice
-
-Assignment
-
-✅ DAY 09: Tuples & Sets
-
-Revision
-
-Tuple Basics
-
-Indexing & Slicing
-
-Immutability
-
-Packing & Unpacking
-
-Tuple Methods
-
-Set Basics
-
-Unique Properties
-
-Add/Remove Elements
-
-Set Operations
-
-Membership
-
-Real Examples
-
-Common Errors
-
-Assignment
-
-✅ DAY 10: Dictionaries
-
-Revision
-
-Dictionary Basics
-
-Key-Value Concept
-
-Accessing Values
-
-get() Method
-
-Add & Update
-
-Remove Elements
-
-len()
-
-Iteration
-
-keys(), values(), items()
-
-Nested Dictionaries
-
-Dictionary Comprehension (Intro)
-
-Common Errors
-
-Practice
-
-Assignment
