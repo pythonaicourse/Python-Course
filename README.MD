@@ -1,329 +1,184 @@
 📘 Python 30-Day Syllabus
 
-✅ DAY 01: Introduction & Setup
+What is Polymorphism?
+🎯 DEFINITION
 
-Course Overview:
+“Polymorphism means one name, multiple forms”
 
-What is Programming?
+💡 Simple understanding:
 
-Introduction to Python
+👉 Same method name
+👉 Different behavior
 
-History of Python
+💡 Real-life example:
 
-Features of Python
+👉 Person:
 
-Python vs C / Java
+At home → Son
+At office → Employee
 
-Python Installation (Windows)
+Same person → different roles
 
-VS Code Setup
+❓ PART 2: Why Polymorphism?
 
-First Python Program
+👉 Benefits:
 
-print() Function Basics
+✔ Flexibility
+✔ Code reuse
+✔ Clean design
 
-Understanding Output
 
-Creating & Saving .py Files
 
-Terminal / Command Line Basics
+“We can use same function for different types of data”
 
-Common Beginner Mistakes
+🔥 PART 3: TYPES OF POLYMORPHISM
 
-Practice Guidelines
+👉 1) Method Overloading
+👉 2) Method Overriding
+👉 3) Operator Overloading
 
-GitHub Repository Introduction
+🔥 PART 4: METHOD OVERLOADING
 
-How to Use Course Materials
+👉 Python does NOT support traditional overloading
 
-Daily Study Plan
+👉 But we can achieve using default arguments
 
-Assignment
+class Test:
+    def add(self, a=None, b=None, c=None):
+        if a != None and b != None and c != None:
+            print(a + b + c)
+        elif a != None and b != None:
+            print(a + b)
+        else:
+            print(a)
 
-Q&A + Next Day Preview
+t = Test()
+t.add(10)
+t.add(10, 20)
+t.add(10, 20, 30)
 
-✅ DAY 02: Variables & Data Types
 
-Revision
 
-What is a Variable?
+“Same method… different behavior”
 
-Naming Rules
+🔥 PART 5: METHOD OVERRIDING
 
-Assigning Values
+👉 Child class changes parent method
 
-Multiple Assignment
+class Parent:
+    def show(self):
+        print("Parent method")
 
-Memory Basics
+class Child(Parent):
+    def show(self):
+        print("Child method")
 
-Data Types Overview
+c = Child()
+c.show()
 
-int, float, str, bool
+👉 Output:
 
-type() Function
+👉 Child method
 
-Type Casting
 
-Dynamic Typing
+“Child class gives its own implementation”
 
-Static vs Dynamic Typing
+🔥 PART 6: USING super() IN OVERRIDING
+class Parent:
+    def show(self):
+        print("Parent method")
 
-Reassigning Variables
+class Child(Parent):
+    def show(self):
+        super().show()
+        print("Child method")
 
-Common Mistakes
+c = Child()
+c.show()
 
-Practice Programs
+👉 Output:
 
-Assignment
+Parent method
+Child method
 
-✅ DAY 03: Input & Output
+🔥 PART 7: OPERATOR OVERLOADING
 
-Revision
+👉 Same operator → different behavior
 
-Input vs Output
+print(10 + 20)        # Addition
+print("Hello " + "World")  # String concat
 
-input() Function
+👉 Same + operator
 
-String Input
+👉 Different behavior
 
-Numeric Input (Casting)
+🧠 CUSTOM OPERATOR OVERLOADING
+class Book:
+    def __init__(self, pages):
+        self.pages = pages
 
-print() Advanced Usage
+    def __add__(self, other):
+        return self.pages + other.pages
 
-sep and end
+b1 = Book(100)
+b2 = Book(200)
 
-String Formatting
+print(b1 + b2)
 
-+, ,, format()
+👉 Output:
 
-f-Strings
+👉 300
 
-Multiple Inputs
+🚀 🎯 REAL-TIME PROJECT 1: PAYMENT SYSTEM
+class Payment:
+    def pay(self):
+        print("Generic payment")
 
-Real-Life Examples
+class UPI(Payment):
+    def pay(self):
+        print("UPI Payment")
 
-Common Errors
+class Card(Payment):
+    def pay(self):
+        print("Card Payment")
 
-Practice
+for p in [UPI(), Card()]:
+    p.pay()
 
-Assignment
+👉 Same method → different outputs
 
-✅ DAY 04: Operators & Expressions
+🚀 🎯 REAL-TIME PROJECT 2: NOTIFICATION SYSTEM
+class Notification:
+    def send(self):
+        print("Sending notification")
 
-Revision
+class Email(Notification):
+    def send(self):
+        print("Sending Email")
 
-Arithmetic Operators
+class SMS(Notification):
+    def send(self):
+        print("Sending SMS")
 
-Floor Division vs Division
+n = [Email(), SMS()]
 
-Power Operator
+for i in n:
+    i.send()
+🚀 🎯 REAL-TIME PROJECT 3: EMPLOYEE ROLE SYSTEM
+class Employee:
+    def role(self):
+        print("Employee role")
 
-Comparison Operators
+class Developer(Employee):
+    def role(self):
+        print("Developer coding")
 
-Logical Operators
+class Manager(Employee):
+    def role(self):
+        print("Manager managing")
 
-Assignment Operators
+e = [Developer(), Manager()]
 
-Identity Operators
-
-Membership Operators
-
-Operator Precedence
-
-Expressions
-
-Boolean Logic
-
-Calculator Program
-
-Common Mistakes
-
-Practice
-
-Assignment
-
-✅ DAY 05: Conditional Statements
-
-Revision
-
-Decision Making
-
-if Statement
-
-if-else
-
-elif Ladder
-
-Nested Conditions
-
-Flow of Execution
-
-Real-Life Examples
-
-Even/Odd Program
-
-Grade System
-
-Max of Three Numbers
-
-Common Errors
-
-Practice
-
-Assignment
-
-✅ DAY 06: Loops
-
-Revision
-
-while Loop
-
-Infinite Loops
-
-break, continue, pass
-
-for Loop
-
-range()
-
-Step Values
-
-Nested Loops
-
-Loop with else
-
-Pattern Programs
-
-Sum & Factorial
-
-Common Mistakes
-
-Practice
-
-Assignment
-
-✅ DAY 07: Strings
-
-Revision
-
-String Basics
-
-Indexing & Slicing
-
-Negative Indexing
-
-String Immutability
-
-Operators (+, *)
-
-len()
-
-Membership Operators
-
-String Methods
-
-strip, find, replace
-
-split, join
-
-Formatting
-
-Real Examples
-
-Common Errors
-
-Assignment
-
-✅ DAY 08: Lists
-
-Revision
-
-List Basics
-
-Indexing & Slicing
-
-Modifying Lists
-
-Adding Elements
-
-Removing Elements
-
-len()
-
-Membership
-
-Iteration
-
-List Methods
-
-Nested Lists
-
-Copy Concepts (Basic)
-
-Common Mistakes
-
-Practice
-
-Assignment
-
-✅ DAY 09: Tuples & Sets
-
-Revision
-
-Tuple Basics
-
-Indexing & Slicing
-
-Immutability
-
-Packing & Unpacking
-
-Tuple Methods
-
-Set Basics
-
-Unique Properties
-
-Add/Remove Elements
-
-Set Operations
-
-Membership
-
-Real Examples
-
-Common Errors
-
-Assignment
-
-✅ DAY 10: Dictionaries
-
-Revision
-
-Dictionary Basics
-
-Key-Value Concept
-
-Accessing Values
-
-get() Method
-
-Add & Update
-
-Remove Elements
-
-len()
-
-Iteration
-
-keys(), values(), items()
-
-Nested Dictionaries
-
-Dictionary Comprehension (Intro)
-
-Common Errors
-
-Practice
-
+for i in e:
+    i.role()
 Assignment
