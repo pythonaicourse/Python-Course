@@ -1,329 +1,274 @@
 📘 Python 30-Day Syllabus
 
-✅ DAY 01: Introduction & Setup
+# 🧠 **Day 19 – OOPs Part 04 (Advanced Concepts)**
 
-Course Overview:
+## Abstract Class | Interface | Access Modifiers | Mini Application
 
-What is Programming?
+---
 
-Introduction to Python
+# 🔷 1) ABSTRACT METHOD
 
-History of Python
+---
 
-Features of Python
+## ✅ Definition:
 
-Python vs C / Java
+An **abstract method** is a method that is **declared but does not contain implementation**.
 
-Python Installation (Windows)
+👉 It only defines *what to do*, not *how to do*
 
-VS Code Setup
+---
 
-First Python Program
+## ✅ Syntax:
 
-print() Function Basics
+```python
+from abc import ABC, abstractmethod
 
-Understanding Output
+class Test(ABC):
+    @abstractmethod
+    def m1(self):
+        pass
+```
 
-Creating & Saving .py Files
+---
 
-Terminal / Command Line Basics
+## 💡 Important Points:
 
-Common Beginner Mistakes
+* Must be inside an abstract class
+* Child class **must implement** it
+* Cannot create object if not implemented
 
-Practice Guidelines
+---
 
-GitHub Repository Introduction
+# 🔷 2) ABSTRACT CLASS
 
-How to Use Course Materials
+---
 
-Daily Study Plan
+## ✅ Definition:
 
-Assignment
+An **abstract class** is a class that contains **at least one abstract method**.
 
-Q&A + Next Day Preview
+---
 
-✅ DAY 02: Variables & Data Types
+## 💡 Key Points:
 
-Revision
+* Cannot create object
+* Used as a blueprint
+* Child classes must implement abstract methods
 
-What is a Variable?
+---
 
-Naming Rules
+## ✅ Example:
 
-Assigning Values
+```python
+from abc import ABC, abstractmethod
 
-Multiple Assignment
+class Test(ABC):
+    @abstractmethod
+    def m1(self):
+        pass
 
-Memory Basics
+# t = Test() ❌ Error (cannot create object)
+```
 
-Data Types Overview
+---
 
-int, float, str, bool
+# 🔷 3) INTERFACE (Python Concept)
 
-type() Function
+---
 
-Type Casting
+## ✅ Definition:
 
-Dynamic Typing
+An **interface** is a class that contains **only abstract methods**.
 
-Static vs Dynamic Typing
+👉 It acts like a contract
+👉 Forces child classes to implement methods
 
-Reassigning Variables
+---
 
-Common Mistakes
+## ✅ Example:
 
-Practice Programs
+```python
+from abc import ABC, abstractmethod
 
-Assignment
+class DBInterface(ABC):
+    @abstractmethod
+    def connect(self):
+        pass
 
-✅ DAY 03: Input & Output
+    @abstractmethod
+    def disconnect(self):
+        pass
 
-Revision
 
-Input vs Output
+class Oracle(DBInterface):
+    def connect(self):
+        print("Connecting to Oracle Database")
 
-input() Function
+    def disconnect(self):
+        print("Disconnecting from Oracle Database")
 
-String Input
 
-Numeric Input (Casting)
+class Sybase(DBInterface):
+    def connect(self):
+        print("Connecting to Sybase Database")
 
-print() Advanced Usage
+    def disconnect(self):
+        print("Disconnecting from Sybase Database")
 
-sep and end
 
-String Formatting
+dbname = input("Enter Database Name (Oracle/Sybase): ")
 
-+, ,, format()
+if dbname == "Oracle":
+    obj = Oracle()
+elif dbname == "Sybase":
+    obj = Sybase()
+else:
+    print("Invalid database")
+    exit()
 
-f-Strings
+obj.connect()
+obj.disconnect()
+```
 
-Multiple Inputs
+---
 
-Real-Life Examples
+# 🔷 4) DIFFERENCE
 
-Common Errors
+## Concrete Class vs Abstract Class vs Interface
 
-Practice
+| Feature         | Concrete Class | Abstract Class      | Interface        |
+| --------------- | -------------- | ------------------- | ---------------- |
+| Methods         | Normal methods | Abstract + normal   | Only abstract    |
+| Object Creation | Yes            | No                  | No               |
+| Purpose         | Implementation | Partial abstraction | Full abstraction |
 
-Assignment
+---
 
-✅ DAY 04: Operators & Expressions
+# 🔷 5) ACCESS MODIFIERS
 
-Revision
+---
 
-Arithmetic Operators
+## ✅ 1) Public Variable
 
-Floor Division vs Division
+👉 Accessible everywhere
 
-Power Operator
+```python
+name = "Venky"
+```
 
-Comparison Operators
+---
 
-Logical Operators
+## ✅ 2) Protected Variable (_)
 
-Assignment Operators
+👉 Internal use (convention only)
 
-Identity Operators
+```python
+_name = "Venky"
+```
 
-Membership Operators
+---
 
-Operator Precedence
+## ✅ 3) Private Variable (__)
 
-Expressions
+👉 Cannot access directly outside class
 
-Boolean Logic
+```python
+__name = "Venky"
+```
 
-Calculator Program
+---
 
-Common Mistakes
+## 💡 Example:
 
-Practice
+```python
+class Test:
+    x = 10        # public
+    _y = 20       # protected
+    __z = 30      # private
 
-Assignment
+    def m1(self):
+        print(self.x)
+        print(self._y)
+        print(self.__z)
 
-✅ DAY 05: Conditional Statements
+t = Test()
+t.m1()
 
-Revision
+print(Test.x)
+print(Test._y)
 
-Decision Making
+# print(Test.__z) ❌ Error
+print(Test._Test__z)  # Access using name mangling
+```
 
-if Statement
+---
 
-if-else
+# 🔷 6) MINI BANK APPLICATION (REAL-TIME)
 
-elif Ladder
+---
 
-Nested Conditions
+## 🎯 Concept:
 
-Flow of Execution
+Using Abstract Class + Interface + Access Modifier
 
-Real-Life Examples
+---
 
-Even/Odd Program
+```python
+from abc import ABC, abstractmethod
 
-Grade System
+class Bank(ABC):
+    def __init__(self, name, balance):
+        self.name = name
+        self._balance = balance   # protected
 
-Max of Three Numbers
+    @abstractmethod
+    def interest(self):
+        pass
 
-Common Errors
 
-Practice
+class SavingsAccount(Bank):
+    def interest(self):
+        print(self.name, "Savings Interest:", self._balance * 0.05)
 
-Assignment
 
-✅ DAY 06: Loops
+class CurrentAccount(Bank):
+    def interest(self):
+        print(self.name, "No interest for current account")
 
-Revision
 
-while Loop
+acc1 = SavingsAccount("Rahul", 10000)
+acc1.interest()
 
-Infinite Loops
+acc2 = CurrentAccount("Ravi", 20000)
+acc2.interest()
+```
 
-break, continue, pass
+---
 
-for Loop
+# 😂 FUN UNDERSTANDING
 
-range()
+👉 Abstract Class = Rule Book 📜
+👉 Interface = Strict Contract 🤝
+👉 Child Class = Implementation 👨‍💻
 
-Step Values
+---
 
-Nested Loops
+# 🎯 SUMMARY
 
-Loop with else
+---
 
-Pattern Programs
+✔ Abstract Method → only declaration
+✔ Abstract Class → cannot create object
+✔ Interface → only abstract methods
+✔ Access Modifiers → control data access
+✔ Used in real-world applications
 
-Sum & Factorial
+---
 
-Common Mistakes
+# 🚀 FINAL LINE 
 
-Practice
+“Advanced OOP concepts are not just theory…
+they are used in real-world systems like banking, APIs, and large applications 🔥”
 
-Assignment
-
-✅ DAY 07: Strings
-
-Revision
-
-String Basics
-
-Indexing & Slicing
-
-Negative Indexing
-
-String Immutability
-
-Operators (+, *)
-
-len()
-
-Membership Operators
-
-String Methods
-
-strip, find, replace
-
-split, join
-
-Formatting
-
-Real Examples
-
-Common Errors
-
-Assignment
-
-✅ DAY 08: Lists
-
-Revision
-
-List Basics
-
-Indexing & Slicing
-
-Modifying Lists
-
-Adding Elements
-
-Removing Elements
-
-len()
-
-Membership
-
-Iteration
-
-List Methods
-
-Nested Lists
-
-Copy Concepts (Basic)
-
-Common Mistakes
-
-Practice
-
-Assignment
-
-✅ DAY 09: Tuples & Sets
-
-Revision
-
-Tuple Basics
-
-Indexing & Slicing
-
-Immutability
-
-Packing & Unpacking
-
-Tuple Methods
-
-Set Basics
-
-Unique Properties
-
-Add/Remove Elements
-
-Set Operations
-
-Membership
-
-Real Examples
-
-Common Errors
-
-Assignment
-
-✅ DAY 10: Dictionaries
-
-Revision
-
-Dictionary Basics
-
-Key-Value Concept
-
-Accessing Values
-
-get() Method
-
-Add & Update
-
-Remove Elements
-
-len()
-
-Iteration
-
-keys(), values(), items()
-
-Nested Dictionaries
-
-Dictionary Comprehension (Intro)
-
-Common Errors
-
-Practice
 
 Assignment
